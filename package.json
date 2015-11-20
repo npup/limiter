@@ -1,0 +1,31 @@
+{
+  "name": "limiter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/limiter.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "clean": "rm -f dist/*",
+    "test": "npm run build && mocha -u bdd test/",
+    "build": "browserify src/limiter.js --standalone limiter -o dist/limiter.dev.js && browserify src/limiter.js --standalone limiter | uglifyjs -m > dist/limiter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npup/limiter.git"
+  },
+  "keywords": [],
+  "author": "P. Envall <petter.envall@gmail.com> (http://petter.envall.se/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/npup/limiter/issues"
+  },
+  "homepage": "https://github.com/npup/limiter",
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "mocha": "^2.3.4",
+    "proclaim": "^3.4.0",
+    "uglify-js": "^2.6.1"
+  }
+}
