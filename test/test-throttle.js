@@ -17,9 +17,9 @@ describe("throttle", function () {
   describe("mandatory arguments", function () {
 
     describe("first argument", function () {
-      var invalidFirstArgs = [void 0, null, 1, "foo", /expr/]
-        , validFirstArg = function () {}
-        , validSecondArg = 100;
+      var invalidFirstArgs = [void 0, null, 1, "foo", /expr/],
+        validFirstArg = function () {},
+        validSecondArg = 100;
 
       it("should throw if first argument is not a function", function () {
         var errorCount = 0;
@@ -56,9 +56,9 @@ describe("throttle", function () {
 
     describe("second argument", function () {
 
-      var invalidSecondArgs = [void 0, null, 1.25, "foo", /expr/, function () {}, NaN, -1]
-        , validSecondArg = 100
-        , validFirstArg = function () {};
+      var invalidSecondArgs = [void 0, null, 1.25, "foo", /expr/, function () {}, NaN, -1],
+        validSecondArg = 100,
+        validFirstArg = function () {};
 
       it("should throw if second argument is not a positive integer", function () {
         var errorCount = 0;
