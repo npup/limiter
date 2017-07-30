@@ -9,7 +9,8 @@
   "scripts": {
     "clean": "rm -f dist/*",
     "test": "npm run build && mocha -u bdd test/",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "testling": "testling"
   },
   "repository": {
     "type": "git",
